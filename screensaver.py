@@ -41,16 +41,19 @@ import re
 import string
 import sys
 from time import sleep
+from os.path import expanduser
 
 ################################################################################
+home            = expanduser("~")
+
 #CONFIG
 do_scrape = 1                    # troggle scraping on/off
 do_save = 1                      # save paste to folder
 do_printself    = 1                 # show this file at start.
-output_file     ="/home/m42d/pastes/goodies"           # path to save scrape results to.
-save_path       = '/home/m42d/pastes/' # path to save pastes to
-que_file        = '/home/m42d/pastes/que'                 # path to save que to.
-scraped_file    = '/home/m42d/pastes/scraped'         # path to save scraped id's to.
+output_file     = home + '/pastes/goodies'           # path to save scrape results to.
+save_path       = home + '/home/m42d/pastes/' # path to save pastes to
+que_file        = home + '/home/m42d/pastes/que'                 # path to save que to.
+scraped_file    = home + '/home/m42d/pastes/scraped'         # path to save scraped id's to.
         # only saves if paste expires and regex or triggerword matches
         # unless save_tw or save_rx is matched than it wil save even
         # if if the past never expires.
